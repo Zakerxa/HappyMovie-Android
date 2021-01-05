@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "986904195371",
+    "firebase_url": "https://our-business-app.firebaseio.com",
+    "project_id": "our-business-app",
+    "storage_bucket": "our-business-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986904195371:android:9add14c767a848e069d56e",
+        "android_client_info": {
+          "package_name": "com.android.happymovies"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "986904195371-urj39hd8r76vp0uvc067bd6agrt064jt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6NQMAKWk7SYeVtAFT_5XwuSltrP_szfQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "986904195371-9ruooh0k9dp2npuhjbue8hcd4lg2oo33.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

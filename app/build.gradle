@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+    defaultConfig {
+        applicationId "com.android.happymovies"
+        minSdkVersion 21
+        targetSdkVersion 29
+        multiDexEnabled true
+        versionCode 6
+        versionName "3.0.3"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("myreleasekey.keystore")
+            storePassword "karito"
+            keyAlias "zekerxakey"
+            keyPassword "karito11231"
+        }
+    }
+
+
+    buildTypes {
+        release {
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+        }
+        debug {
+
+            applicationIdSuffix ""
+            debuggable true
+
+        }
+        staging {
+            shrinkResources true
+            initWith debug
+            manifestPlaceholders = [hostName: "http://legend-pro.cyber.zekerxa.com/"]
+            applicationIdSuffix ""
+        }
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.google.firebase:firebase-invites:17.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation platform('com.google.firebase:firebase-bom:26.1.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-ads:19.5.0'
+    implementation 'com.google.firebase:firebase-core:18.0.0'
+    implementation 'com.google.firebase:firebase-analytics:18.0.0'
+    implementation 'com.google.firebase:firebase-auth:20.0.1'
+    implementation 'com.google.android.gms:play-services-ads:19.5.0'
+    implementation 'com.google.firebase:firebase-firestore:22.0.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+}
+
+apply plugin: 'com.google.gms.google-services'
